@@ -21,12 +21,12 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(MONGO_URI)
+  .connect(mongodb+srv://24334018_db_user:eMrXBpmEfGkWsUbh@cluster0.hbukbji.mongodb.net/?appName=Cluster0)
   .then(() => {
     console.log("Connected to MongoDB successfully!");
 
-    app.listen(PORT, () => {
-      console.log(`Server started on http://localhost:${PORT}`);
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server started on port ${PORT}`);
     });
   })
   .catch((error) => {
