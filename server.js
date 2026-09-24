@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(mongodb+srv://24334018_db_user:eMrXBpmEfGkWsUbh@cluster0.hbukbji.mongodb.net/?appName=Cluster0)
+  .connect(MONGO_URI)
   .then(() => {
     console.log("Connected to MongoDB successfully!");
 
